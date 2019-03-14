@@ -9,7 +9,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
   <script type="text/javascript">
-  
+  	$(document).ready(function(){
+	  $("#loginBtn").click(function(){
+	    if($("#id").val() == "") {
+	    	alert("아이디 입력해");
+	    } else if($("#pass").val() == "") {
+	    	alert("비번 입력해");
+	    } else {
+	   		$("#memberform").attr("action", "/ktds/login").submit();	
+	    }
+	  });
+	  
+	  $("#moveRegisterBtn").click(function() {
+			document.location.href = "/ktds/user/member.html";
+		});
+	});
   </script>
 </head>
 <body>
